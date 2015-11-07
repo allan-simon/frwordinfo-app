@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">法语单词信息</string>
+    <string name="enter_word">输入法语单词</string>
+    <string name="button_search">搜索</string>
+</resources>
