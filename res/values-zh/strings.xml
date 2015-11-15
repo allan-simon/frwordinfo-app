@@ -3,4 +3,48 @@
     <string name="app_name">法语单词信息</string>
     <string name="enter_word">输入法语单词</string>
     <string name="button_search">搜索</string>
+
+    <string name="flexion_of">...的变为:</string>
+
+    <string-array name="types">
+        <item></item>
+        <item>名词</item>
+        <item>common noun</item>
+        <item>proper name</item>
+        <item>family name</item>
+        <item>surname</item>
+        <item>动词</item>
+        <item>particule</item>
+        <item>形容词</item>
+        <item>possessive adjective</item>
+        <item>demonstrative adjective</item>
+        <item>numerical adjective</item>
+        <item>interrogative adjective</item>
+        <item>undefined adjective</item>
+        <item>副词</item>
+        <item>interrogative adverb</item>
+        <item>relative adverb</item>
+        <item>interjection</item>
+        <item>preposition</item>
+        <item>连词</item>
+        <item>coordination conjunction</item>
+        <item>defined article</item>
+        <item>partitive article</item>
+        <item>undefined article</item>
+        <item>字母</item>
+        <item>代词</item>
+        <item>relative pronoum</item>
+        <item>undefined pronoum</item>
+        <item>personnal pronoum</item>
+        <item>demonstrative pronoum</item>
+        <item>possesive pronoum</item>
+        <item>interrogative pronoum</item>
+        <item>onomatopea</item>
+        <item>TODO gentillé</item>
+        <item>symbol</item>
+        <item>prefix</item>
+        <item>suffix</item>
+        <item>TODO locution phrase</item>
+    </string-array>
+
 </resources>
