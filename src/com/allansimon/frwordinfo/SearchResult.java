@@ -45,6 +45,16 @@ public class SearchResult {
         return info.has(LEMMA);
     }
 
+    public String getLemma()
+    {
+        try {
+            return info.getString(LEMMA);
+        } catch (JSONException e) {
+            Log.e(this.getClass().toString(), e.toString());
+            return "";
+        }
+    }
+
     public boolean isNoun()
     {
         // 1 = noum

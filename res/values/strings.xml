@@ -4,6 +4,8 @@
     <string name="enter_word">Type a French word</string>
     <string name="button_search">Search</string>
 
+    <string name="flexion_of">Flexion of:</string>
+
     <string-array name="types">
         <item></item>
         <item>noun</item>

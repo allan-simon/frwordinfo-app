@@ -30,6 +30,12 @@ public class MainActivity extends ActionBarActivity
         dao = new SearchWordDao(this);
     }
 
+    public void openFlexion(View view)
+    {
+        String lemma = ((TextView) view).getText().toString().trim();
+        performSearch(lemma);
+    }
+
     public void search(View view)
     {
         EditText enterWord = (EditText) findViewById(R.id.enter_word);

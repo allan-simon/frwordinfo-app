@@ -57,17 +57,22 @@ public class SearchResultAdapter extends ArrayAdapter<SearchResult>
         textView.setText(result.word + ": " + types[result.type]);
         linearLayout.addView(textView);
 
-        if (!result.isFlexion()) {
-            String dictionnaryLine = result.getDictionnaryInfoLine();
-            if (dictionnaryLine.isEmpty()) {
-                return linearLayout;
-            }
-            TextView otherInfo = createOtherInfo(linearLayout);
-            otherInfo.setText(dictionnaryLine);
-            linearLayout.addView(otherInfo);               
+        if (result.isFlexion()) {
+            String lemmaStr = result.getLemma();
+            LinearLayout flexionLine = createLineFlexionOf(linearLayout);
+            TextView lemma = (TextView) flexionLine.findViewById(R.id.lemma);
+            lemma.setText(lemmaStr);
+            linearLayout.addView(flexionLine);
             return linearLayout;
         }
 
+        String dictionnaryLine = result.getDictionnaryInfoLine();
+        if (dictionnaryLine.isEmpty()) {
+            return linearLayout;
+        }
+        TextView otherInfo = createOtherInfo(linearLayout);
+        otherInfo.setText(dictionnaryLine);
+        linearLayout.addView(otherInfo);
         return linearLayout;
     }
 
@@ -81,6 +86,18 @@ public class SearchResultAdapter extends ArrayAdapter<SearchResult>
             container,
             false
         ).findViewById(R.id.item_result);
+    }
+
+    /**
+     *
+     */
+    private LinearLayout createLineFlexionOf(ViewGroup container)
+    {
+        return (LinearLayout) ((Activity)getContext()).getLayoutInflater().inflate(
+            R.layout.word_flexion,
+            container,
+            false
+        );
     }
 
     /**
