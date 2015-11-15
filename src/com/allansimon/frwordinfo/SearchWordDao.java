@@ -44,7 +44,7 @@ public class SearchWordDao {
             "    meta " +
             "FROM word " +
             "WHERE " +
-            "    hashwordd = " + hash + " OR " +
+            "    hashword = " + hash + " OR " +
             "    hashascii = " + hash + " " +
             "ORDER BY word, type",
             null
