@@ -26,5 +26,17 @@
             android:layout_weight="1"
         />
     </LinearLayout>
+
+    <ListView
+        android:id="@+id/full_result"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@android:color/transparent"
+        android:cacheColorHint="@android:color/transparent"
+        android:divider="#CCCCCC"
+        android:dividerHeight="1dp"
+        android:padding="10dp"
+    >
+    </ListView>
 </LinearLayout>
 

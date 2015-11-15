@@ -3,4 +3,45 @@
     <string name="app_name">French Word Info</string>
     <string name="enter_word">Type a French word</string>
     <string name="button_search">Search</string>
+
+    <string-array name="types">
+        <item></item>
+        <item>noun</item>
+        <item>common noun</item>
+        <item>proper name</item>
+        <item>family name</item>
+        <item>surname</item>
+        <item>verb</item>
+        <item>particule</item>
+        <item>adjective</item>
+        <item>possessive adjective</item>
+        <item>demonstrative adjective</item>
+        <item>numerical adjective</item>
+        <item>interrogative adjective</item>
+        <item>undefined adjective</item>
+        <item>adverb</item>
+        <item>interrogative adverb</item>
+        <item>relative adverb</item>
+        <item>interjection</item>
+        <item>preposition</item>
+        <item>conjunction</item>
+        <item>coordination conjunction</item>
+        <item>defined article</item>
+        <item>partitive article</item>
+        <item>undefined article</item>
+        <item>letter</item>
+        <item>pronoum</item>
+        <item>relative pronoum</item>
+        <item>undefined pronoum</item>
+        <item>personnal pronoum</item>
+        <item>demonstrative pronoum</item>
+        <item>possesive pronoum</item>
+        <item>interrogative pronoum</item>
+        <item>onomatopea</item>
+        <item>TODO gentillé</item>
+        <item>symbol</item>
+        <item>prefix</item>
+        <item>suffix</item>
+        <item>TODO locution phrase</item>
+    </string-array>
 </resources>
