@@ -40,10 +40,9 @@ public class MainActivity extends ActionBarActivity
     {
         EditText enterWord = (EditText) findViewById(R.id.enter_word);
         String word = enterWord.getText().toString().trim();
-        if (word == "") {
+        if (word.isEmpty()) {
             return;
         }
-        Log.w(this.getClass().toString(), "performSearch");
         performSearch(word);
     }
 
