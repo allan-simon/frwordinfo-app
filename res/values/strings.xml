@@ -6,6 +6,43 @@
 
     <string name="flexion_of">Flexion of:</string>
 
+    <string-array name="genders">
+        <item></item>
+        <item>masculin</item>
+        <item>feminin</item>
+    </string-array>
+
+    <string-array name="persons">
+        <item></item>
+        <item>1st</item>
+        <item>2nd</item>
+        <item>3rd</item>
+    </string-array>
+
+    <string-array name="numbers">
+        <item></item>
+        <item>singular</item>
+        <item>plural</item>
+    </string-array>
+
+    <string-array name="modes">
+        <item></item>
+        <item>participe</item>
+        <item>indicative</item>
+        <item>imperative</item>
+        <item>conditional</item>
+        <item>subjunctive</item>
+    </string-array>
+
+    <string-array name="tenses">
+        <item></item>
+        <item>present</item>
+        <item>past</item>
+        <item>imperfect</item>
+        <item>simple past</item>
+        <item>future</item>
+    </string-array>
+
     <string-array name="types">
         <item></item>
         <item>noun</item>

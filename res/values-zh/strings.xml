@@ -4,7 +4,44 @@
     <string name="enter_word">输入法语单词</string>
     <string name="button_search">搜索</string>
 
-    <string name="flexion_of">...的变为:</string>
+    <string name="flexion_of">注释：</string>
+
+    <string-array name="genders">
+        <item></item>
+        <item>阳性</item>
+        <item>阴性</item>
+    </string-array>
+
+    <string-array name="persons">
+        <item></item>
+        <item>第一</item>
+        <item>第二</item>
+        <item>第三</item>
+    </string-array>
+
+    <string-array name="numbers">
+        <item></item>
+        <item>单数</item>
+        <item>复数</item>
+    </string-array>
+
+    <string-array name="modes">
+        <item></item>
+        <item>分词</item>
+        <item>直陈式</item>
+        <item>命令式</item>
+        <item>条件式</item>
+        <item>虚拟式</item>
+    </string-array>
+
+    <string-array name="tenses">
+        <item></item>
+        <item>现在时</item>
+        <item>过去时</item>
+        <item>未完成过去时</item>
+        <item>简单过去时</item>
+        <item>简单将来时</item>
+    </string-array>
 
     <string-array name="types">
         <item></item>
