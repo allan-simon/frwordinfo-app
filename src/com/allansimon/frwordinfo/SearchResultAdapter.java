@@ -12,6 +12,8 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.LinearLayout;
 
+import android.util.Log;
+
 import com.allansimon.frwordinfo.SearchResult;
 
 public class SearchResultAdapter extends ArrayAdapter<SearchResult>
@@ -20,7 +22,10 @@ public class SearchResultAdapter extends ArrayAdapter<SearchResult>
     private static final int WORD_COLUMN = 0 ;
     private static final int ASCII_COLUMN = 1 ;
 
+    private static final int NO_INFO = 0;
+
     public String types[];
+    public String flexionStrings[][];
 
     public SearchResultAdapter(
         Context context,
@@ -31,6 +36,14 @@ public class SearchResultAdapter extends ArrayAdapter<SearchResult>
         super(context, resource);
 
         types = context.getResources().getStringArray(R.array.types);
+
+        flexionStrings = new String[5][];
+        flexionStrings[SearchResult.NUMBER_INFO_INDEX] = context.getResources().getStringArray(R.array.numbers);
+        flexionStrings[SearchResult.GENDER_INFO_INDEX] = context.getResources().getStringArray(R.array.genders);
+        flexionStrings[SearchResult.MODE_INFO_INDEX] = context.getResources().getStringArray(R.array.modes);
+        flexionStrings[SearchResult.TENSE_INFO_INDEX] = context.getResources().getStringArray(R.array.tenses);
+        flexionStrings[SearchResult.PERSON_INFO_INDEX] = context.getResources().getStringArray(R.array.persons);
+
 
         for (cursor.moveToFirst(); !cursor.isAfterLast(); cursor.moveToNext()) {
 
@@ -63,6 +76,12 @@ public class SearchResultAdapter extends ArrayAdapter<SearchResult>
             TextView lemma = (TextView) flexionLine.findViewById(R.id.lemma);
             lemma.setText(lemmaStr);
             linearLayout.addView(flexionLine);
+
+            String infoText = getFlexionInfoText(result.getFlexionInfos());
+            TextView flexionInfoLine = createOtherInfo(linearLayout);
+            flexionInfoLine.setText(infoText);
+            linearLayout.addView(flexionInfoLine);
+
             return linearLayout;
         }
 
@@ -124,4 +143,19 @@ public class SearchResultAdapter extends ArrayAdapter<SearchResult>
         );
     }
 
+    /**
+     *
+     */
+    private String getFlexionInfoText(int[] flexionInfos)
+    {
+        //TODO use a string builder
+        String infoLine = "";
+        for (int i = 0; i < flexionInfos.length; i++) {
+            if (flexionInfos[i] == NO_INFO) {
+                continue;
+            }
+            infoLine += flexionStrings[i][flexionInfos[i]] + " ";
+        }
+        return infoLine;
+    }
 }
