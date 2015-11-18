@@ -46,6 +46,9 @@ public class SearchResult {
     public JSONObject info;
     private String ascii;
 
+    /**
+     *
+     */
     public SearchResult(Cursor cursor)
     {
         word = cursor.getString(WORD_COLUMN);
@@ -62,11 +65,17 @@ public class SearchResult {
         }
     }
 
+    /**
+     *
+     */
     public boolean isFlexion()
     {
         return info.has(LEMMA);
     }
 
+    /**
+     *
+     */
     public String getLemma()
     {
         try {
